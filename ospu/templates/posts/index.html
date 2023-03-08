@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %} - главная страница {% endblock %}
+{% block title %}Главная{% endblock %}
 
 {% block content %}
-
-<div class="alert alert-primary">123123</div>
-
+<h1>Последние новости портала</h1>
+{% for post in posts %}
+{% include 'posts/post_card.html' %}
+{% endfor %}
 {% endblock %}

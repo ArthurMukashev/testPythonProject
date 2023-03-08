@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+Пост {{ post }}
+{% endblock %}
+{% block content %}
+<div class="row my-5">
+    <aside class="col-12 col-md-3">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                Дата публикации: {{ post.pub_date|date:'d E Y' }}
+            </li>
+            <li class="list-group-item">
+                Автор: {{ post.author.get_full_name }}
+            </li>
+        </ul>
+    </aside>
+    <article class="col-12 col-md-9">
+        {{ post.text|linebreaks }}
+    </article>
+</div>
+
+
+{% endblock %}

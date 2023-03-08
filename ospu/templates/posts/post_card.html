@@ -1,0 +1,11 @@
+<div class="card my-5">
+    <div class="card-body">
+        <h3 class="card-title">{{ post.title }}</h3>
+        <h6 class="card-subtitle mb-2 text-muted">{% if post.subtitle %}{{ post.subtitle }}{% endif %}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Дата публикации: {{ post.pub_date }}</h6>
+        <article>
+            <p class="card-text">{{ post|linebreaks }}</p>
+        </article>
+        <a href="{% url 'posts:post_detail' post.id %}" class="card-link">Подробная информация</a>
+    </div>
+</div>

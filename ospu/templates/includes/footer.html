@@ -1,3 +1,20 @@
-<div>
-  123
-</div>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link">&copy; Mukashev Corp. 2016-{{year}}</a>
+                </li>
+            </ul>
+
+            <span class="navbar-brand">Полезные ссылки:</span>
+            <ul class="nav justify-content-end">
+                {% for link in links %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ link.link_url }}" target="_blank">{{ link.link_name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
