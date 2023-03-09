@@ -3,7 +3,7 @@
 {% block title %}Главная{% endblock %}
 
 {% block content %}
-<h1>Последние новости портала</h1>
+<h1 class="my-3">Последние новости портала</h1>
 {% for post in posts %}
 {% include 'posts/post_card.html' %}
 {% endfor %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+Посты по категории {{ category.title }}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ category.title }}</h1>
+    <p>{{ category.description|linebreaks }}</p>
+    {% for post in posts %}
+    {% include 'posts/post_card.html' %}
+    {% endfor %}
+</div>
+{% endblock %}

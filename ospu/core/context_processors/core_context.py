@@ -3,7 +3,7 @@ from django.apps import apps
 from datetime import datetime
 
 
-def get_site_name(request):
+def get_site_params(request):
     return {
         'site_title': 'Университетский портал - ',
         'site_name': 'Университетский портал',

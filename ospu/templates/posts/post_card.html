@@ -3,9 +3,12 @@
         <h3 class="card-title">{{ post.title }}</h3>
         <h6 class="card-subtitle mb-2 text-muted">{% if post.subtitle %}{{ post.subtitle }}{% endif %}</h6>
         <h6 class="card-subtitle mb-2 text-muted">Дата публикации: {{ post.pub_date }}</h6>
+        {% if not category and post.category %}
+        <h6 class="card-subtitle mb-2 text-muted">Категория: {{ post.category }}</h6>
+        {% endif %}
         <article>
             <p class="card-text">{{ post|linebreaks }}</p>
         </article>
-        <a href="{% url 'posts:post_detail' post.id %}" class="card-link">Подробная информация</a>
+        <a href="{% url 'posts:post_detail' post.id %}" class="btn btn-primary card-link">Подробная информация</a>
     </div>
 </div>

@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block title %}Об авторе{% endblock %}
+
+{% block content %}
+<div class="row my-5">
+    <div class="col-3">
+        {% load static %}
+        <img src="{% static 'img/avatar.jpg' %}" class="card-img-top img-thumbnail" alt="profile_photo">
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Мукашев Артур Алтынбекович</h5>
+                <p class="card-text">Начинающий Python-программист. Музыкант.</p>
+                <figure>
+                    <blockquote class="blockquote">
+                        <p>&laquo;Программирование — это разбиение чего-то большого и невозможного на что-то маленькое и
+                            вполне реальное.&raquo;</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Jazzwant
+                    </figcaption>
+                </figure>
+                <h5 class="card-title">Ссылки</h5>
+                <div class="list-group">
+                    <a href="https://github.com/ArthurMukashev" class="list-group-item list-group-item-action"
+                       target="_blank">
+                        GitHub - @ArthurMukashev
+                    </a>
+                    <a href="https://orenburg.hh.ru/resume/2f5e1824ff091d75fe0039ed1f5a6673786741"
+                       class="list-group-item list-group-item-action"
+                       target="_blank">
+                        HH - Моё резюме
+                    </a>
+                    <a href="https://vk.com/art_m_m" class="list-group-item list-group-item-action"
+                       target="_blank">
+                        VK - Артур Мукашев
+                    </a>
+                </div>
+                <h5 class="card-title">Что вдохновляет</h5>
+                <div class="alert alert-primary" role="alert">
+                    Музыка, Технологии, Активные виды спорта, Компьютерные игры
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Список технологий</h5>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action">Python 3.9</li>
+                    <li class="list-group-item list-group-item-action">Django 2.2</li>
+                    <li class="list-group-item list-group-item-action">Bootstrap 5.3</li>
+                    <li class="list-group-item list-group-item-action">HTML 5</li>
+                    <li class="list-group-item list-group-item-action">CSS 3</li>
+                </ul>
+                <h5 class="card-title">Навыки</h5>
+                <ul class="list-group">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action">Усидчивость</li>
+                        <li class="list-group-item list-group-item-action">Целеустремленность</li>
+                        <li class="list-group-item list-group-item-action">Изучение доп. литературы (в т.ч.
+                            документаций)
+                        </li>
+                        <li class="list-group-item list-group-item-action">Использование материалов обучающих
+                            видеороликов
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Скилл</h5>
+                <table class="table table-bordered table-hover text-center">
+                    <thead>
+                    <tr>
+                        <th scope="col">Технология</th>
+                        <th scope="col">Понимание</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Python</th>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0"
+                                 aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Django</th>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0"
+                                 aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 40%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bootstrap</th>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0"
+                                 aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">HTML</th>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0"
+                                 aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CSS</th>
+                        <td>
+                            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0"
+                                 aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 60%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

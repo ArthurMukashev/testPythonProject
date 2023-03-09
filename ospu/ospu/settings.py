@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'about.apps.AboutConfig',
     'core.apps.CoreConfig',
     'posts.apps.PostsConfig',
     'django.contrib.admin',
@@ -66,7 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'core.context_processors.core_context.get_site_name'
+                'core.context_processors.core_context.get_site_params'
             ],
         },
     },

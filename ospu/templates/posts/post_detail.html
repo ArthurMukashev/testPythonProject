@@ -1,22 +1,29 @@
 {% extends 'base.html' %}
 {% block title %}
-Пост {{ post }}
+Пост {{ post.title }}
 {% endblock %}
 {% block content %}
 <div class="row my-5">
     <aside class="col-12 col-md-3">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">
+            <li class="list-group-item list-group-item-action">
                 Дата публикации: {{ post.pub_date|date:'d E Y' }}
             </li>
-            <li class="list-group-item">
+            <li class="list-group-item list-group-item-action">
                 Автор: {{ post.author.get_full_name }}
             </li>
+            {% if post.category %}
+            <li class="list-group-item list-group-item-action">
+                <a href="{% url 'posts:category_posts' post.category.slug %}" class="text-decoration-none">Категория: {{ post.category }}</a>
+            </li>
+            {% endif %}
         </ul>
     </aside>
     <article class="col-12 col-md-9">
+        <h4>{{ post.title }}</h4>
         {{ post.text|linebreaks }}
     </article>
+    <a class="btn btn-primary text-decoration-none" href="{% url 'posts:index' %}">Назад</a>
 </div>
 
 
