@@ -1,12 +1,11 @@
-from django.apps import apps
-
 from datetime import datetime
+
+from ..models import Link
 
 
 def get_site_params(request):
     return {
-        'site_title': 'Университетский портал - ',
-        'site_name': 'Университетский портал',
         'year': datetime.now().year,
-        'links': apps.get_model('core', 'Link').objects.all()
+        'links': Link.objects.all(),
+        'group': request.user.groups.all()[0].name
     }

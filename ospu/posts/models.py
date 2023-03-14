@@ -71,3 +71,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.text[:30] + '...'
+
+
+class PostFile(models.Model):
+    file = models.FileField(upload_to='files/%Y/%m%/d')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='files')
